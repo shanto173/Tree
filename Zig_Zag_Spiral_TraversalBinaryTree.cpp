@@ -19,7 +19,6 @@ public:
         }
         queue<TreeNode*> q;
         q.push(root);
-        
         int ct = 0;
         while(!q.empty()){
             
