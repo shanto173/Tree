@@ -40,7 +40,6 @@ class Solution {
 
         TreeNode* node = root->right;
         vector<int> temp;
-
         while(node){
             if(!isLeaf(node)){
                 res.push_back(node->val);
@@ -57,17 +56,16 @@ class Solution {
     }
     void addLeafNode(TreeNode* root,vector<int>& res){
 
-        TreeNode* node = root->right;
 
-        if(isLeaf(node)){
-            res.push_back(node->val);
+        if(isLeaf(root)){
+            res.push_back(root->val);
             return;
         }
-        if(node->left){
-            addLeafNode(node->left);
+        if(root->left){
+            addLeafNode(root->left);
         }
-        if(node->right){
-            addLeafNode(node->right);
+        if(root->right){
+            addLeafNode(root->right);
         }
     }
 
